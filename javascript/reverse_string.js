@@ -1,19 +1,29 @@
 function reverseString(str) {
-  // type your code here
+  const strArr = str.split('');
+  let returnStr = '';
+  while (strArr.length > 0) {
+    returnStr += strArr.pop();
+  }
+  return returnStr;
 }
 
 if (require.main === module) {
   // add your own tests in here
   console.log("Expecting: 'ih'");
-  console.log("=>", reverseString("hi"));
+  console.log('=>', reverseString('hi'));
 
-  console.log("");
+  console.log('');
 
   console.log("Expecting: 'ybabtac'");
-  console.log("=>", reverseString("catbaby"));
+  console.log('=>', reverseString('catbaby'));
+
+  console.log("Expecting: 'ados'");
+  console.log('=>', reverseString('soda'));
 }
 
 module.exports = reverseString;
 
 // Please add your pseudocode to this file
-// And a written explanation of your solution
+// break the string into an array
+// loop for the lenth of the array
+// pop the char to a new string
